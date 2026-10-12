@@ -1,0 +1,116 @@
+{
+ "actualizado": "2026-10-12",
+ "nota": "Tasas anuales brutas, antes de impuestos, tomadas de los sitios oficiales al 12-oct-2026. Cambian sin aviso; confirma en la app antes de invertir.",
+ "cuentas": [
+  {
+   "inst": "Openbank",
+   "tipo": "Banco",
+   "tasa": 13.0,
+   "cond": "13% fijo en Apartado Open hasta $30,000 (promocional: requiere al menos una compra/pago con su tarjeta). $30,000.01–$1M: 7%. Más de $1M: 6.5%. GAT nominal 13.88%, real 9.31% (cálculo 07-sep-2026, vigente al 07-feb-2027)",
+   "prot": "IPAB 400,000 UDIs",
+   "fuente": "https://www.openbank.mx/",
+   "verificado": true,
+   "oficial": "https://www.openbank.mx/"
+  },
+  {
+   "inst": "Nu",
+   "tipo": "Banco",
+   "tasa": 13.0,
+   "cond": "Sitio oficial: 'hasta 13%'. Cajita 6.50% anual disponible 24/7; congelada hasta 6.80%. Tope de la tasa de 13%: por confirmar (fuentes secundarias dicen $25,000)",
+   "prot": "IPAB 400,000 UDIs",
+   "fuente": "https://nu.com.mx/cuenta/",
+   "verificado": true,
+   "oficial": "https://nu.com.mx/cuenta/"
+  },
+  {
+   "inst": "Stori",
+   "tipo": "SOFIPO",
+   "tasa": 15.0,
+   "cond": "Sitio oficial: GAT nominal anual 'hasta 15.00%'. Condiciones y plazos: por confirmar en la app",
+   "prot": "PROSOFIPO 25,000 UDIs",
+   "fuente": "https://www.storicard.com/",
+   "verificado": true,
+   "oficial": "https://www.storicard.com/"
+  },
+  {
+   "inst": "Finsus",
+   "tipo": "SOFIPO",
+   "tasa": 11.0,
+   "cond": "11% promocional a plazo fijo de 120 días, desde $100 (por tiempo limitado). Otras inversiones hasta 8.69% anual",
+   "prot": "PROSOFIPO 25,000 UDIs",
+   "fuente": "https://finsus.mx/",
+   "verificado": true,
+   "oficial": "https://finsus.mx/"
+  },
+  {
+   "inst": "Klar",
+   "tipo": "SOFIPO",
+   "tasa": 8.5,
+   "cond": "Cuenta Klar: rendimiento anual 'hasta 8.5%', invierte desde $100",
+   "prot": "PROSOFIPO 25,000 UDIs",
+   "fuente": "https://www.klar.mx/",
+   "verificado": true,
+   "oficial": "https://www.klar.mx/"
+  },
+  {
+   "inst": "Ualá",
+   "tipo": "Banco",
+   "tasa": null,
+   "cond": "Tasa por confirmar: el sitio oficial no publica la tasa en su página pública",
+   "prot": "IPAB (por confirmar)",
+   "fuente": "https://www.uala.mx/",
+   "verificado": false,
+   "oficial": "https://www.uala.mx/"
+  },
+  {
+   "inst": "Mercado Pago",
+   "tipo": "Fintech",
+   "tasa": null,
+   "cond": "Tasa por confirmar: el sitio oficial no publica la tasa en su página pública",
+   "prot": "por confirmar",
+   "fuente": "https://www.mercadopago.com.mx/cuenta",
+   "verificado": false,
+   "oficial": "https://www.mercadopago.com.mx/cuenta"
+  },
+  {
+   "inst": "Plata",
+   "tipo": "Banco",
+   "tasa": null,
+   "cond": "Tasa por confirmar: el sitio oficial no publica la tasa en su página pública",
+   "prot": "por confirmar",
+   "fuente": "https://bancoplata.mx/",
+   "verificado": false,
+   "oficial": "https://bancoplata.mx/"
+  },
+  {
+   "inst": "Hey Banco",
+   "tipo": "Banco",
+   "tasa": null,
+   "cond": "Tasa por confirmar: el sitio oficial no publica la tasa en su página pública",
+   "prot": "IPAB (por confirmar)",
+   "fuente": "https://heybanco.com/",
+   "verificado": false,
+   "oficial": "https://heybanco.com/"
+  },
+  {
+   "inst": "Revolut",
+   "tipo": "Banco",
+   "tasa": null,
+   "cond": "Tasa por confirmar: el sitio oficial no publica la tasa en su página pública",
+   "prot": "por confirmar",
+   "fuente": "https://www.revolut.com/es-MX/",
+   "verificado": false,
+   "oficial": "https://www.revolut.com/es-MX/"
+  },
+  {
+   "inst": "CETES 28 días (Cetesdirecto)",
+   "tipo": "Gobierno",
+   "tasa": null,
+   "cond": "Ver gráfica Inflación vs CETES (Banxico, se actualiza sola)",
+   "prot": "Gobierno Federal",
+   "fuente": "https://www.cetesdirecto.com/",
+   "verificado": false,
+   "oficial": "https://www.cetesdirecto.com/"
+  }
+ ]
+}

@@ -1,0 +1,8 @@
+<!doctype html><html lang="es-MX"><meta charset="utf-8"><meta name="viewport" content="width=device-width"><title>FIBRAs</title><link rel="stylesheet" href="style.css">
+<h1>Distribuciones de FIBRAs mexicanas</h1><p class="warn" id="nota"></p>
+<label>CBFIs que tienes: <input id="n" type="number" value="100"></label>
+<table><thead><tr><th>FIBRA</th><th>Distribución/CBFI</th><th>Periodo</th><th>Tu pago aprox.</th><th>Nota</th><th>Fuente</th></tr></thead><tbody id="t"></tbody></table>
+<script>
+let D;function r(){const n=+document.getElementById('n').value;document.getElementById('t').innerHTML=D.fibras.map(x=>`<tr><td>${x.clave}</td><td>${x.dist??"por confirmar"}</td><td>${x.periodo}</td><td>${x.dist==null?'—':'$'+(x.dist*n).toFixed(2)}</td><td>${x.nota}</td><td>${x.fuente?`<a href="${x.fuente}">ver</a>`:'—'}</td></tr>`).join('')}
+fetch('data/fibras.json').then(x=>x.json()).then(d=>{D=d;document.getElementById('nota').textContent=d.nota+' No es recomendación de inversión.';r()});document.getElementById('n').oninput=r;
+</script></html>

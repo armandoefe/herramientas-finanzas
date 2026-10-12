@@ -1,0 +1,11 @@
+<!doctype html><html lang="es-MX"><meta charset="utf-8"><meta name="viewport" content="width=device-width"><title>Inflación vs CETES</title><link rel="stylesheet" href="style.css">
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4"></script><script src="https://cdn.jsdelivr.net/npm/chartjs-adapter-date-fns@3"></script>
+<h1>Inflación anual (INPC) vs CETES 28 días</h1><p class="warn" id="nota">Cargando datos…</p><div id="ult"></div><canvas id="c"></canvas>
+<p><small>Fuente: Banco de México, SIE (CETES 28 días SF43936; inflación anual INPC).</small></p>
+<script>
+fetch('data/banxico.json?'+Date.now()).then(r=>r.json()).then(d=>{const n=document.getElementById('nota');
+if(d.MUESTRA||!d.cetes28.length){n.textContent='Actualizando datos desde Banxico… vuelve en unos minutos.';return}
+n.textContent='Actualizado: '+d.actualizado;const L=a=>a[a.length-1];
+document.getElementById('ult').innerHTML=`<p><b>CETES 28d:</b> ${L(d.cetes28)[1]}% (${L(d.cetes28)[0]}) · <b>Inflación anual:</b> ${L(d.inflacion)[1]}% (${L(d.inflacion)[0]})</p>`;
+const p=a=>a.map(([x,y])=>({x,y}));new Chart(document.getElementById('c'),{type:'line',data:{datasets:[{label:'CETES 28d (%)',data:p(d.cetes28),borderColor:'#0b6e4f',pointRadius:0},{label:'Inflación anual (%)',data:p(d.inflacion),borderColor:'#d1495b',pointRadius:0}]},options:{animation:false,scales:{x:{type:'time'}}}})}).catch(()=>document.getElementById('nota').textContent='Actualizando datos…');
+</script></html>

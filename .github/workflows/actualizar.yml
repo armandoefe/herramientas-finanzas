@@ -1,0 +1,26 @@
+name: Actualizar datos y publicar
+on:
+  schedule: [{cron: "0 14 * * 1-5"}]
+  workflow_dispatch:
+  push: {branches: [main]}
+permissions: {contents: write, pages: write, id-token: write}
+concurrency: {group: pages, cancel-in-progress: false}
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    environment: {name: github-pages, url: "${{ steps.d.outputs.page_url }}"}
+    steps:
+      - uses: actions/checkout@v4
+      - name: Banxico
+        run: python3 scripts/fetch_banxico.py
+        env: {BANXICO_TOKEN: "${{ secrets.BANXICO_TOKEN }}"}
+      - name: Commit datos
+        if: github.event_name != 'push'
+        run: |
+          git config user.name github-actions; git config user.email github-actions@users.noreply.github.com
+          git add data/banxico.json; git commit -m "Datos Banxico" || exit 0; git push
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
+        with: {path: .}
+      - id: d
+        uses: actions/deploy-pages@v4

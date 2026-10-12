@@ -1,0 +1,47 @@
+{
+ "nota": "Distribuciones por CBFI tomadas de avisos oficiales publicados en BMV (actualizado 12-oct-2026).",
+ "fibras": [
+  {
+   "clave": "FUNO11",
+   "dist": null,
+   "periodo": "",
+   "fuente": "https://www.bmv.com.mx/",
+   "nota": "Por confirmar con el aviso oficial en BMV"
+  },
+  {
+   "clave": "FIBRAMQ12",
+   "dist": 0.6125,
+   "periodo": "2T26",
+   "fuente": "https://www.bmv.com.mx/docs-pub/eventfid/eventfid_1576632_1622_1.pdf",
+   "nota": "Pasa a pago mensual: 0.2042 jul-26; guía 2026 Ps 2.45; FMTY controla ~80.69%"
+  },
+  {
+   "clave": "FIBRAPL14",
+   "dist": 0.7314,
+   "periodo": "2T26 (pago 4-ago-26)",
+   "fuente": "https://www.bmv.com.mx/docs-pub/eventfid/eventfid_1576585_1721_1.pdf",
+   "nota": ""
+  },
+  {
+   "clave": "DANHOS13",
+   "dist": 0.45,
+   "periodo": "2T26",
+   "fuente": "https://www.bmv.com.mx/docs-pub/eventfid/eventfid_1575698_17416-3_1.pdf",
+   "nota": ""
+  },
+  {
+   "clave": "FMTY14",
+   "dist": 0.1274,
+   "periodo": "pago 18-jun-26",
+   "fuente": "https://www.bmv.com.mx/docs-pub/eventfid/eventfid_1566938_2157_1.pdf",
+   "nota": "No comparable (integración FIBRAMQ)"
+  },
+  {
+   "clave": "TERRA13",
+   "dist": null,
+   "periodo": "",
+   "fuente": "https://www.bmv.com.mx/",
+   "nota": "Por confirmar con el aviso oficial en BMV"
+  }
+ ]
+}

@@ -1,0 +1,10 @@
+<!doctype html><html lang="es-MX"><meta charset="utf-8"><meta name="viewport" content="width=device-width"><title>Comparador de rendimientos</title><link rel="stylesheet" href="style.css">
+<h1>¿Dónde rinde más tu dinero?</h1><p class="warn" id="nota"></p>
+<label>Monto a invertir: $<input id="m" type="number" value="25000"></label>
+<table><thead><tr><th>Institución</th><th>Tipo</th><th>Tasa máx.</th><th>Ganancia 1 año aprox.*</th><th>Condiciones</th><th>Protección</th><th>Fuente</th></tr></thead><tbody id="t"></tbody></table>
+<p><small>*Bruto, sin considerar topes ni ISR. Tasas cambian sin aviso; confirma en el sitio oficial.</small></p>
+<script>
+let D;const f=n=>n.toLocaleString('es-MX',{style:'currency',currency:'MXN'});
+function r(){const m=+document.getElementById('m').value;document.getElementById('t').innerHTML=D.cuentas.slice().sort((a,b)=>(b.tasa||0)-(a.tasa||0)).map(c=>`<tr><td><a href="${c.oficial}">${c.inst}</a></td><td>${c.tipo}</td><td>${c.tasa==null?"por confirmar":(c.tasa+"%"+(c.verificado?"":" (por confirmar)"))}</td><td>${c.tasa==null?'—':f(m*c.tasa/100)}</td><td>${c.cond}</td><td>${c.prot}</td><td>${c.fuente?`<a href="${c.fuente}">ver</a>`:'—'}</td></tr>`).join('')}
+fetch('data/tasas.json').then(x=>x.json()).then(d=>{D=d;document.getElementById('nota').textContent=d.nota+' Actualizado: '+d.actualizado;r()});document.getElementById('m').oninput=r;
+</script></html>
