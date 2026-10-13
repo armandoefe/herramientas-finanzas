@@ -1,0 +1,10 @@
+name: Descubrir series
+on: workflow_dispatch
+jobs:
+  d:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: python3 scripts/descubrir.py
+        env: {BANXICO_TOKEN: "${{ secrets.BANXICO_TOKEN }}"}
+      - run: pip -q install yfinance && python3 -c "import yfinance as y;[print(t, y.Ticker(t).history(period='5d').tail(1).Close.values) for t in ['^GSPC','^MXX','GC=F','MXN=X','FUNO11.MX','FIBRAPL14.MX','FIBRAMQ12.MX','FIBRAS.MX','^SPBMVFIBRAS']]"
