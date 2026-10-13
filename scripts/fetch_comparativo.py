@@ -14,7 +14,16 @@ def bmx(sid):
     s = pd.Series({pd.to_datetime(x["fecha"], dayfirst=True): float(x["dato"].replace(",", "")) for x in d if x["dato"] not in ("N/E", "")})
     return s.resample("ME").last().ffill()
 fx = yh("MXN=X", False)
-spx, mxx, gold = yh("^GSPC", False), yh("^MXX", False), yh("GC=F", False)
+def first(cands):
+    for t, adj in cands:
+        try:
+            x = yh(t, adj)
+            if len(x) and x.index[0] <= ini + pd.DateOffset(days=40): print("usa", t, x.index[0].date()); return t, x
+        except Exception as e: print(t, e)
+    raise SystemExit("sin serie")
+spx_t, spx = first([("^SP500TR", False), ("SPY", True)])
+mxx_t, mxx = first([("NAFTRACISHRS.MX", True), ("NAFTRAC.MX", True)])
+gold = yh("GC=F", False)
 fib = None
 for t in ["FIBRATC14.MX", "FIBRATC.MX"]:
     try:
@@ -31,16 +40,16 @@ print("Adj/Close ratio inicio", float(fib[fib.index>=ini].iloc[0]/cl[cl.index>=i
 if fib_inicio > ini: ini = fib_inicio
 udi, yr = bmx("SP68257"), bmx("SF43924").ffill()
 idx = spx.index[spx.index >= ini]
-ultimo = min(fin, yf.Ticker("^GSPC").history(period="10d").index[-1].tz_localize(None).normalize())
+ultimo = min(fin, yf.Ticker("GC=F").history(period="10d").index[-1].tz_localize(None).normalize())
 def base(s): s = s.reindex(idx).ffill(); return (s / s.iloc[0] * 100)
 fibr = fib
 u = udi.reindex(idx).ffill(); y = yr.reindex(idx).ffill()
 udib = ((u / u.shift(1)).fillna(1) * (1 + y.shift(1).fillna(y.iloc[0]) / 100 / 12)).cumprod() * 100
-S = {"S&P 500 (MXN)": base(spx * fx), "S&P/BMV IPC": base(mxx), "FIBRATC (ETF FIBRAs)": base(fibr),
+S = {"S&P 500 TR (MXN)": base(spx * fx), "IPC (NAFTRAC, con dividendos)": base(mxx), "FIBRATC (ETF FIBRAs)": base(fibr),
      "Oro (MXN)": base(gold * fx), "Udibono 10a (aprox.)": base(udib),
-     "S&P 500 (USD)": base(spx), "Oro (USD)": base(gold)}
+     "S&P 500 TR (USD)": base(spx), "Oro (USD)": base(gold)}
 yrs = (ultimo - idx[0]).days / 365.25
-out = {"fibratc": {"ticker": fib_t, "inicio": str(fib_inicio.date()), "distribuciones": len(div)}, "actualizado": str(fin.date()), "inicio": str(idx[0].date()), "fin": str(ultimo.date()), "fechas": [str(d.date()) for d in idx],
+out = {"tickers": {"sp500": spx_t, "ipc": mxx_t}, "fibratc": {"ticker": fib_t, "inicio": str(fib_inicio.date()), "distribuciones": len(div)}, "actualizado": str(fin.date()), "inicio": str(idx[0].date()), "fin": str(ultimo.date()), "fechas": [str(d.date()) for d in idx],
        "series": {k: [round(float(x), 2) for x in v] for k, v in S.items()},
        "resumen": {k: {"acumulado": round(float(v.iloc[-1] - 100), 1), "anual": round(float((v.iloc[-1] / 100) ** (1 / yrs) - 1) * 100, 1)} for k, v in S.items()}}
 json.dump(out, open("data/comparativo.json", "w"), ensure_ascii=False)
