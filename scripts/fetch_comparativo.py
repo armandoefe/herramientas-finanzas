@@ -18,6 +18,7 @@ spx, mxx, gold = yh("^GSPC", False), yh("^MXX", False), yh("GC=F", False)
 fib = pd.concat([yh(t, True) for t in ["FUNO11.MX", "FIBRAPL14.MX", "FIBRAMQ12.MX"]], axis=1).ffill()
 udi, yr = bmx("SP68257"), bmx("SF43924").ffill()
 idx = spx.index[spx.index >= ini]
+ultimo = min(fin, yf.Ticker("^GSPC").history(period="10d").index[-1].tz_localize(None).normalize())
 def base(s): s = s.reindex(idx).ffill(); return (s / s.iloc[0] * 100)
 fibr = (fib.reindex(idx).ffill().pct_change().fillna(0).mean(axis=1) + 1).cumprod() * 100
 u = udi.reindex(idx).ffill(); y = yr.reindex(idx).ffill()
@@ -25,8 +26,8 @@ udib = ((u / u.shift(1)).fillna(1) * (1 + y.shift(1).fillna(y.iloc[0]) / 100 / 1
 S = {"S&P 500 (MXN)": base(spx * fx), "S&P/BMV IPC": base(mxx), "Canasta FIBRAs (proxy)": base(fibr),
      "Oro (MXN)": base(gold * fx), "Udibono 10a (aprox.)": base(udib),
      "S&P 500 (USD)": base(spx), "Oro (USD)": base(gold)}
-yrs = (idx[-1] - idx[0]).days / 365.25
-out = {"actualizado": str(fin.date()), "inicio": str(idx[0].date()), "fin": str(idx[-1].date()), "fechas": [str(d.date()) for d in idx],
+yrs = (ultimo - idx[0]).days / 365.25
+out = {"actualizado": str(fin.date()), "inicio": str(idx[0].date()), "fin": str(ultimo.date()), "fechas": [str(d.date()) for d in idx],
        "series": {k: [round(float(x), 2) for x in v] for k, v in S.items()},
        "resumen": {k: {"acumulado": round(float(v.iloc[-1] - 100), 1), "anual": round(float((v.iloc[-1] / 100) ** (1 / yrs) - 1) * 100, 1)} for k, v in S.items()}}
 json.dump(out, open("data/comparativo.json", "w"), ensure_ascii=False)
