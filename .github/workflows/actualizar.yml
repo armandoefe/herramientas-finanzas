@@ -17,6 +17,9 @@ jobs:
       - name: Comparativo
         run: pip -q install yfinance pandas && python3 scripts/fetch_comparativo.py
         env: {BANXICO_TOKEN: "${{ secrets.BANXICO_TOKEN }}"}
+      - name: Datos del dia
+        run: pip -q install matplotlib && python3 scripts/datos_del_dia.py
+        env: {BANXICO_TOKEN: "${{ secrets.BANXICO_TOKEN }}"}
       - name: Commit datos
         if: github.event_name != 'push'
         run: |
