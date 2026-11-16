@@ -53,6 +53,16 @@
    "oficial": "https://www.klar.mx/"
   },
   {
+   "inst": "Klar (Ahorro Adicional)",
+   "tipo": "SOFIPO",
+   "tasa": 13.0,
+   "cond": "Ahorro Adicional, Apartado Flexible, solo para clientes Plus y Platino: 13.00% anual fijo (GAT nominal 13.86%, GAT real 9.55%). Light: 10.00% (GAT nom. 10.51%, real 6.32%). Cálculo del 05-nov al 07-dic-2026. Tasas promocionales, sujetas a cambio",
+   "prot": "PROSOFIPO 25,000 UDIs",
+   "fuente": "https://www.klar.mx/gat",
+   "verificado": true,
+   "oficial": "https://www.klar.mx/gat"
+  },
+  {
    "inst": "Ualá",
    "tipo": "Banco",
    "tasa": 15.0,
