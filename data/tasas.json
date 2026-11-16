@@ -103,6 +103,16 @@
    "oficial": "https://www.revolut.com/es-MX/"
   },
   {
+   "inst": "Mifel",
+   "tipo": "Banco",
+   "tasa": 10.0,
+   "cond": "Cuenta Digital Mifel y Cuenta Digital Evoluciona: 10.00% anual fijo, rendimientos diarios, desde $100 y hasta $500,000 (arriba de ese monto: 0%). GAT nominal 10.52%, GAT real 6.13%. Cálculo 30-sep-2026, vigente al 31-ene-2027. Cuenta Digital Mifel: depósitos mensuales limitados a 3,000 UDIS (aprox. $25,000). Cuenta Digital Evoluciona: depósitos mensuales hasta $500,000. Sin plazo; el dinero está disponible",
+   "prot": "IPAB 400,000 UDIs",
+   "fuente": "https://www.mifel.com.mx/info/cuenta-digital-mifel",
+   "verificado": true,
+   "oficial": "https://www.mifel.com.mx/personas/cuentas/cuenta-digital"
+  },
+  {
    "inst": "CETES 28 días (Cetesdirecto)",
    "tipo": "Gobierno",
    "tasa": 6.2,
