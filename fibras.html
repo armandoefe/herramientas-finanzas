@@ -1,8 +1,150 @@
-<!doctype html><html lang="es-MX"><meta charset="utf-8"><meta name="viewport" content="width=device-width"><title>FIBRAs</title><link rel="stylesheet" href="style.css">
-<h1>Distribuciones de FIBRAs mexicanas</h1><p class="warn" id="nota"></p>
-<label>CBFIs que tienes: <input id="n" type="number" value="100"></label>
-<table><thead><tr><th>FIBRA</th><th>Distribución/CBFI</th><th>Periodo</th><th>Tu pago aprox.</th><th>Nota</th><th>Fuente</th></tr></thead><tbody id="t"></tbody></table>
+<!doctype html><html lang="es-MX"><meta charset="utf-8"><meta name="viewport" content="width=device-width"><title>FIBRAs mexicanas: precios y distribuciones</title><link rel="stylesheet" href="style.css">
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4"></script>
+<p><a href="https://finanzasytarjetasmx.wordpress.com/">← Volver al blog Finanzas y Tarjetas MX</a></p>
+<h1>FIBRAs mexicanas: precios y distribuciones</h1>
+<p class="warn" id="nota">Cargando datos…</p>
+<aside class="referidos"><p><strong>Este artículo contiene enlaces de referido.</strong> Si abres una cuenta o una tarjeta con estos enlaces, el blog puede recibir una comisión, sin costo extra para ti.</p><ul>
+<li><a href="https://openbank.onelink.me/HARX/hx60yxru" rel="nofollow sponsored">Openbank</a> (código 18537011171617101303)</li>
+<li><a href="https://nubank.com.mx/mgm/?id=fzLUIiZjS-6OYeZHSnF8Mg&amp;msg=06478&amp;utm_channel=referral&amp;utm_medium=other&amp;utm_source=mgm" rel="nofollow sponsored">Nu</a></li>
+<li><a href="https://mpago.li/1ACqcsW" rel="nofollow sponsored">Mercado Pago</a> (código BI9rTVCH)</li>
+<li><a href="https://hybn.co/b/yvJHPPe-" rel="nofollow sponsored">Hey Banco</a></li>
+<li><a href="https://storicard.onelink.me/uu1Y/rmhgljnq" rel="nofollow sponsored">Stori</a></li>
+<li><a href="https://signup.klar.mx?code=ODI0RKRG&amp;utm_source=Referral&amp;utm_medium=Referral&amp;pid=Referral&amp;utm_campaign=Offer_Screen&amp;c=Offer_Screen" rel="nofollow sponsored">Klar</a></li>
+<li><a href="https://bancoplata.mx/amigos/credito/armando.enrique9jxo" rel="nofollow sponsored">Plata Card</a></li>
+<li><a href="https://revolut.com/referral/?referral-code=armandoenriquef!OCT1-26-AR-MX-H2&amp;geo-redirect" rel="nofollow sponsored">Revolut</a></li>
+<li><a href="https://americanexpress.com/es-mx/referral/platinum-credit?ref=aRMaNFUMzM&amp;XL=MIANS" rel="nofollow sponsored">American Express</a></li>
+<li><a href="https://d.didiglobal.com/GRFVCCa?r=MGM_homepage_icon&amp;c=M2" rel="nofollow sponsored">DiDi Card</a></li>
+</ul></aside>
+<label>CBFIs que tienes: <input id="n" type="number" value="100" min="0"></label>
+<p><label>Gráfica de precios (5 años, cierres semanales): <select id="g"></select></label></p>
+<canvas id="c" height="120"></canvas>
+<div class="wrap"><table><thead><tr>
+<th data-k="clave">FIBRA</th>
+<th data-k="precio">Precio</th>
+<th data-k="cambio">Var. día</th>
+<th data-k="r52">Rango 52 sem.</th>
+<th data-k="yield">Rend. 12m</th>
+<th data-k="dist">Última dist./CBFI</th>
+<th data-k="periodo">Periodo</th>
+<th data-k="pago">Tu pago aprox.</th>
+<th data-k="nav">NAV</th>
+<th data-k="prima">Prima/desc.</th>
+<th data-k="ocup">Ocupación</th>
+<th data-k="fuente">Fuente</th>
+</tr></thead><tbody id="t"></tbody></table></div>
+<p id="avisos"></p>
+<h2>Fuentes</h2>
+<ul>
+<li>Precios, variación, rango de 52 semanas, capitalización y rendimiento bruto a 12 meses: Yahoo Finance (no son datos oficiales de la bolsa y pueden ir con retraso o, en algunos casos, sin operaciones recientes).</li>
+<li>Última distribución, fechas ex-derecho y de pago: avisos oficiales de la BMV y de BIVA, con liga al documento en cada fila.</li>
+<li>NAV, ocupación y deuda: solo si se verificaron en el reporte trimestral oficial de la FIBRA; si no, se muestra «por confirmar».</li>
+<li>La API de Banxico no publica precios ni dividendos de FIBRAs; sirve para comparar, por ejemplo, contra CETES o la inflación.</li>
+</ul>
+<p><small>No es recomendación de inversión. Las FIBRAs cotizan en bolsa: el precio puede bajar, la distribución puede recortarse y las condiciones fiscales dependen de cada persona. Confirma siempre en el aviso oficial y en tu casa de bolsa.</small></p>
+<aside class="referidos"><p><strong>Este artículo contiene enlaces de referido.</strong> Si abres una cuenta o una tarjeta con estos enlaces, el blog puede recibir una comisión, sin costo extra para ti.</p><ul>
+<li><a href="https://openbank.onelink.me/HARX/hx60yxru" rel="nofollow sponsored">Openbank</a> (código 18537011171617101303)</li>
+<li><a href="https://nubank.com.mx/mgm/?id=fzLUIiZjS-6OYeZHSnF8Mg&amp;msg=06478&amp;utm_channel=referral&amp;utm_medium=other&amp;utm_source=mgm" rel="nofollow sponsored">Nu</a></li>
+<li><a href="https://mpago.li/1ACqcsW" rel="nofollow sponsored">Mercado Pago</a> (código BI9rTVCH)</li>
+<li><a href="https://hybn.co/b/yvJHPPe-" rel="nofollow sponsored">Hey Banco</a></li>
+<li><a href="https://storicard.onelink.me/uu1Y/rmhgljnq" rel="nofollow sponsored">Stori</a></li>
+<li><a href="https://signup.klar.mx?code=ODI0RKRG&amp;utm_source=Referral&amp;utm_medium=Referral&amp;pid=Referral&amp;utm_campaign=Offer_Screen&amp;c=Offer_Screen" rel="nofollow sponsored">Klar</a></li>
+<li><a href="https://bancoplata.mx/amigos/credito/armando.enrique9jxo" rel="nofollow sponsored">Plata Card</a></li>
+<li><a href="https://revolut.com/referral/?referral-code=armandoenriquef!OCT1-26-AR-MX-H2&amp;geo-redirect" rel="nofollow sponsored">Revolut</a></li>
+<li><a href="https://americanexpress.com/es-mx/referral/platinum-credit?ref=aRMaNFUMzM&amp;XL=MIANS" rel="nofollow sponsored">American Express</a></li>
+<li><a href="https://d.didiglobal.com/GRFVCCa?r=MGM_homepage_icon&amp;c=M2" rel="nofollow sponsored">DiDi Card</a></li>
+</ul></aside>
+<p><a href="https://finanzasytarjetasmx.wordpress.com/">← Volver al blog Finanzas y Tarjetas MX</a></p>
 <script>
-let D;function r(){const n=+document.getElementById('n').value;document.getElementById('t').innerHTML=D.fibras.map(x=>`<tr><td>${x.clave}</td><td>${x.dist??"por confirmar"}</td><td>${x.periodo}</td><td>${x.dist==null?'—':'$'+(x.dist*n).toFixed(2)}</td><td>${x.nota}</td><td>${x.fuente?`<a href="${x.fuente}">ver</a>`:'—'}</td></tr>`).join('')}
-fetch('data/fibras.json').then(x=>x.json()).then(d=>{D=d;document.getElementById('nota').textContent=d.nota+' No es recomendación de inversión.';r()});document.getElementById('n').oninput=r;
+const mxn=(n,d=2)=>n==null?'—':n.toLocaleString('es-MX',{style:'currency',currency:'MXN',minimumFractionDigits:d,maximumFractionDigits:d});
+const pct=n=>n==null||!Number.isFinite(n)?'—':(n.toLocaleString('es-MX',{maximumFractionDigits:2,minimumFractionDigits:2})+'%');
+const fe=s=>{if(!s)return '—';const[y,m,d]=s.split('-');return d+'/'+m+'/'+y};
+let M,P,ord={k:'yield',dir:-1},ch;
+function merge(){
+  const pr=P.precios||{};
+  return (M.fibras||[]).map(f=>{
+    const p=pr[f.clave]||{};
+    const precio=p.precio??null, nav=f.nav??null;
+    const prima=(precio!=null&&nav)?(precio/nav-1)*100:null;
+    return Object.assign({},f,p,{prima,pago:(f.dist==null||f.estado==='deslistada')?null:f.dist});
+  });
+}
+function val(r,k){
+  if(k==='clave')return r.clave;
+  if(k==='precio')return r.precio;
+  if(k==='cambio')return r.cambio_pct;
+  if(k==='r52')return r.max_52s;
+  if(k==='yield')return r.yield_12m;
+  if(k==='dist')return r.dist;
+  if(k==='periodo')return r.periodo||'';
+  if(k==='pago')return r.dist;
+  if(k==='nav')return r.nav;
+  if(k==='prima')return r.prima;
+  if(k==='ocup')return r.ocupacion;
+  return 0;
+}
+function render(){
+  const n=+document.getElementById('n').value||0;
+  const rows=merge().slice().sort((a,b)=>{
+    const av=val(a,ord.k), bv=val(b,ord.k);
+    if(av==null&&bv==null)return 0; if(av==null)return 1; if(bv==null)return -1;
+    if(typeof av==='string')return av.localeCompare(bv,'es')*ord.dir;
+    return (av-bv)*ord.dir;
+  });
+  document.getElementById('t').innerHTML=rows.map(r=>{
+    const des=r.estado==='deslistada';
+    const dist=des?'No aplica':(r.dist==null?'por confirmar':mxn(r.dist,4));
+    const pago=(!des&&r.dist!=null)?mxn(r.dist*n):'—';
+    const fuente=r.fuente_dist?'<a href="'+r.fuente_dist+'">aviso</a>':(r.fuente_estado?'<a href="'+r.fuente_estado+'">aviso</a>':'—');
+    const precio=des?'—':(r.precio==null?'por confirmar':mxn(r.precio)+(r.fecha?' <small>'+fe(r.fecha)+'</small>':'')+(r.aviso||r.obsoleto?' *':''));
+    const r52=(r.min_52s!=null&&r.max_52s!=null)?(mxn(r.min_52s)+' – '+mxn(r.max_52s)):'—';
+    const st=r.estado==='deslistada'?' <small>(deslistada)</small>':'';
+    const nav=r.nav==null?'por confirmar':mxn(r.nav)+(r.fecha_nav?' <small>'+fe(r.fecha_nav)+'</small>':'');
+    return '<tr>'+
+      '<td><strong>'+r.clave+'</strong><br><small>'+(r.nombre||'')+'</small>'+st+'</td>'+
+      '<td>'+precio+'</td>'+
+      '<td>'+(des?'—':pct(r.cambio_pct))+'</td>'+
+      '<td>'+r52+'</td>'+
+      '<td>'+(des?'—':pct(r.yield_12m))+'</td>'+
+      '<td>'+dist+(r.fecha_ex?'<br><small>ex '+fe(r.fecha_ex)+(r.fecha_pago?' · pago '+fe(r.fecha_pago):'')+'</small>':'')+'</td>'+
+      '<td>'+(r.periodo||'—')+'</td>'+
+      '<td>'+pago+'</td>'+
+      '<td>'+nav+'</td>'+
+      '<td>'+pct(r.prima)+'</td>'+
+      '<td>'+(r.ocupacion==null?'—':pct(r.ocupacion))+'</td>'+
+      '<td>'+fuente+'</td>'+
+    '</tr>';
+  }).join('');
+  const avisos=rows.filter(r=>r.aviso||r.obsoleto||r.estado_nota).map(r=>{
+    const bits=[];
+    if(r.aviso)bits.push(r.aviso);
+    if(r.obsoleto&&r.error)bits.push('Se conservó el último precio disponible. '+r.error);
+    if(r.estado_nota)bits.push(r.estado_nota);
+    return '<li><strong>'+r.clave+':</strong> '+bits.join(' ')+'</li>';
+  });
+  document.getElementById('avisos').innerHTML=avisos.length?'<ul>'+avisos.join('')+'</ul>':'';
+}
+function chart(clave){
+  const p=(P.precios||{})[clave]||{};
+  const h=p.historico||[];
+  ch&&ch.destroy();
+  if(!h.length){ch=null;return}
+  ch=new Chart(document.getElementById('c'),{type:'line',data:{labels:h.map(x=>x[0]),datasets:[{label:clave,data:h.map(x=>x[1]),borderColor:'#0b6e4f',pointRadius:0,borderWidth:2}]},options:{animation:false,plugins:{legend:{display:false}}}});
+}
+Promise.all([
+  fetch('data/fibras.json?'+Date.now()).then(r=>r.json()),
+  fetch('data/fibras_precios.json?'+Date.now()).then(r=>r.json()).catch(()=>({precios:{}}))
+]).then(([m,p])=>{
+  M=m;P=p;
+  const a=P.actualizado||M.actualizado_distribuciones||'';
+  document.getElementById('nota').textContent=(M.nota||'')+' Actualizado: '+(a||'—')+'. No es recomendación de inversión.';
+  const sel=document.getElementById('g');
+  const activas=(m.fibras||[]).filter(f=>f.estado!=='deslistada');
+  sel.innerHTML=activas.map(f=>'<option value="'+f.clave+'">'+f.clave+' · '+f.nombre+'</option>').join('');
+  const pref=activas.find(f=>f.clave==='FUNO11')||activas[0];
+  if(pref){sel.value=pref.clave;chart(pref.clave)}
+  sel.onchange=()=>chart(sel.value);
+  document.getElementById('n').oninput=render;
+  document.querySelectorAll('th[data-k]').forEach(th=>th.onclick=()=>{const k=th.dataset.k;ord.dir=ord.k===k?-ord.dir:-1;ord.k=k;render()});
+  render();
+}).catch(()=>{document.getElementById('nota').textContent='No se pudieron cargar los datos. Intenta de nuevo en unos minutos.';});
 </script></html>
