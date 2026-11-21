@@ -1,6 +1,6 @@
 {
   "actualizado_distribuciones": "2026-11-16",
-  "nota": "La última distribución de cada FIBRA se toma solo de avisos oficiales de la BMV o BIVA. El precio, la variación, el rango de 52 semanas, la capitalización y el rendimiento bruto a 12 meses se actualizan en días hábiles con Yahoo Finance. El NAV, la ocupación y la deuda se anotan solo cuando salen de un reporte trimestral oficial verificado; si no, quedan en blanco. No es recomendación de inversión.",
+  "nota": "La última distribución de cada FIBRA se toma solo de avisos oficiales de la BMV o BIVA. El precio, la variación, el rango de 52 semanas, la capitalización y el rendimiento bruto a 12 meses se actualizan en días hábiles con Yahoo Finance. El NAV se anota cuando la emisora lo publica en su reporte trimestral oficial, o se calcula como patrimonio o capital contable controlador entre CBFIs en circulación (o con derecho a distribución, si el reporte lo desglosa así) y se marca como calculado, con fecha y fuente. Si no hay esas cifras oficiales, se muestra «no publicado». No es recomendación de inversión.",
   "fibras": [
     {
       "clave": "FMTY14",
@@ -19,13 +19,15 @@
       "fuente_dist": "https://www.bmv.com.mx/docs-pub/fibderec/fibderec_1596848_1.pdf",
       "nota": "Pago mensual. Tras la integración con Fibra Macquarie, las cifras no son del todo comparables con las de antes de la fusión.",
       "titulos": 4804828304,
-      "nav": null,
-      "fecha_nav": null,
-      "fuente_nav": null,
+      "nav": 13.57,
+      "fecha_nav": "2026-09-30",
+      "fuente_nav": "https://biva.mx/storage/data-rs-cnbv/ReporteTrimestral_FMTY_2026_3_121817-261030-d9d85f65_1793394273429.pdf",
       "ocupacion": null,
       "ltv": null,
-      "fuente_trimestral": "https://www.bmv.com.mx/docs-pub/eventfid/eventfid_1600478_2157_1.pdf",
-      "fuente_estado": "https://www.bmv.com.mx/docs-pub/eventfid/eventfid_1601460_1622_1.pdf"
+      "fuente_trimestral": "https://biva.mx/storage/data-rs-cnbv/ReporteTrimestral_FMTY_2026_3_121817-261030-d9d85f65_1793394273429.pdf",
+      "fuente_estado": "https://www.bmv.com.mx/docs-pub/eventfid/eventfid_1601460_1622_1.pdf",
+      "nav_tipo": "publicado",
+      "nav_nota": "Valor en libros por CBFI publicado por la emisora en su información financiera trimestral 3T26 ante BIVA: Ps. 13.57 al 30 de septiembre de 2026."
     },
     {
       "clave": "DANHOS13",
@@ -44,12 +46,14 @@
       "fuente_dist": "https://www.bmv.com.mx/docs-pub/eventfid/eventfid_1597487_17416-3_1.pdf",
       "nota": "0.2592 de resultado fiscal y 0.1908 de reembolso de capital.",
       "titulos": 1623607024,
-      "nav": null,
-      "fecha_nav": null,
-      "fuente_nav": null,
+      "nav": 40.55,
+      "fecha_nav": "2026-09-30",
+      "fuente_nav": "https://fibradanhos.com.mx/reportes-trimestrales/pdf/2026/3t26/3T%202026%20Espa%C3%B1ol.pdf",
       "ocupacion": null,
       "ltv": null,
-      "fuente_trimestral": null
+      "fuente_trimestral": "https://fibradanhos.com.mx/reportes-trimestrales/pdf/2026/3t26/3T%202026%20Espa%C3%B1ol.pdf",
+      "nav_tipo": "calculado",
+      "nav_nota": "Calculado: patrimonio controlador 65,830,285,034 pesos (total patrimonio 68,800,361,419 menos participación no controladora 2,970,076,385) entre 1,623,607,024 CBFIs en circulación, según el reporte 3T26 de la emisora."
     },
     {
       "clave": "FUNO11",
@@ -73,7 +77,9 @@
       "fuente_nav": "https://funo.mx/site_media/uploads/documentos/documento-uKwld-1794333463.pdf",
       "ocupacion": 95.6,
       "ltv": null,
-      "fuente_trimestral": "https://funo.mx/site_media/uploads/documentos/documento-uKwld-1794333463.pdf"
+      "fuente_trimestral": "https://funo.mx/site_media/uploads/documentos/documento-uKwld-1794333463.pdf",
+      "nav_tipo": "publicado",
+      "nav_nota": "NAV/CBFI (Patrimonio FUNO) impreso por la emisora en el suplemento informativo 3T26."
     },
     {
       "clave": "FNOVA17",
@@ -92,12 +98,14 @@
       "fuente_dist": "https://biva.mx/storage/information-send/EVENRELXBRL/FACTIN/Eventos_relevantes_Archivo_XBRL_106215_1793316147437.pdf",
       "nota": "100% reembolso de capital. El precio en Yahoo Finance lleva semanas sin volumen; puede estar desactualizado.",
       "titulos": 593930828,
-      "nav": null,
-      "fecha_nav": null,
-      "fuente_nav": null,
+      "nav": 30.35,
+      "fecha_nav": "2026-09-30",
+      "fuente_nav": "https://cdn.investorcloud.net/FNOVA/InformacionFinanciera/ReportesTrimestrales/2026-3T26.pdf",
       "ocupacion": null,
       "ltv": null,
-      "fuente_trimestral": null
+      "fuente_trimestral": "https://biva.mx/storage/information-send/IFFIBRAS/FACTIN/ReporteTrimestral_3T_2026-09-30_FNOVA_1793061838651.pdf",
+      "nav_tipo": "calculado",
+      "nav_nota": "Calculado: patrimonio controlador 18,028,722,000 pesos entre 593,930,828 CBFIs en circulación, según el reporte de resultados 3T26 y la información financiera trimestral ante BIVA."
     },
     {
       "clave": "FIBRAPL14",
@@ -116,12 +124,14 @@
       "fuente_dist": "https://www.bmv.com.mx/docs-pub/fibderec/fibderec_1597020_1.pdf",
       "nota": "100% resultado fiscal.",
       "titulos": 1668204310,
-      "nav": null,
-      "fecha_nav": null,
-      "fuente_nav": null,
+      "nav": 82.42,
+      "fecha_nav": "2026-09-30",
+      "fuente_nav": "https://d1io3yog0oux5.cloudfront.net/_852f1580ba78035545065e858fbb07c8/fibraprologis/db/735/8245/file/Financial+Report.pdf",
       "ocupacion": null,
       "ltv": null,
-      "fuente_trimestral": null
+      "fuente_trimestral": "https://biva.mx/storage/data-rs-cnbv/ReporteTrimestral_FIBRAPL_2026_3_121337-261021-ef28f8d1_1792620203217.pdf",
+      "nav_tipo": "calculado",
+      "nav_nota": "Calculado: patrimonio atribuible a tenedores de CBFIs de US$7,432.151 millones entre 1,668,204,310 CBFIs en circulación (US$4.4552 por CBFI), convertido a pesos con el tipo de cambio de $18.50 por dólar que la emisora usa en su paquete financiero 3T26. El número de CBFIs sale de la información financiera trimestral 3T26 ante BIVA."
     },
     {
       "clave": "FCFE18",
@@ -145,7 +155,9 @@
       "fuente_nav": null,
       "ocupacion": null,
       "ltv": null,
-      "fuente_trimestral": null
+      "fuente_trimestral": null,
+      "nav_tipo": null,
+      "nav_nota": "La emisora no publicó un NAV por CBFI en el reporte 3T26 que pudimos verificar, o no localizamos en ese reporte el patrimonio controlador y el número de CBFIs en circulación para calcularlo."
     },
     {
       "clave": "FHIPO14",
@@ -163,13 +175,15 @@
       "fecha_pago": null,
       "fuente_dist": null,
       "nota": "Última distribución por confirmar con el aviso oficial en BIVA.",
-      "titulos": null,
-      "nav": null,
-      "fecha_nav": null,
-      "fuente_nav": null,
+      "titulos": 373350259,
+      "nav": 23.72,
+      "fecha_nav": "2026-09-30",
+      "fuente_nav": "https://biva.mx/storage/information-send/IFTRIM/BINVEX/ReporteTrimestral_3T_2026_FHIPO_2061_1793313400683.pdf",
       "ocupacion": null,
       "ltv": null,
-      "fuente_trimestral": null
+      "fuente_trimestral": "https://biva.mx/storage/information-send/IFTRIM/BINVEX/ReporteTrimestral_3T_2026_FHIPO_2061_1793313400683.pdf",
+      "nav_tipo": "calculado",
+      "nav_nota": "Calculado: patrimonio total Ps. 8,854.8 millones entre 373,350,259 CBFIs en circulación al cierre del 3T26, según el reporte de resultados y la información financiera trimestral de la emisora."
     },
     {
       "clave": "FSHOP13",
@@ -188,12 +202,14 @@
       "fuente_dist": "https://www.bmv.com.mx/docs-pub/fibderec/fibderec_1600129_1.pdf",
       "nota": "100% reembolso de capital (depreciación fiscal).",
       "titulos": 637115444,
-      "nav": null,
-      "fecha_nav": null,
-      "fuente_nav": null,
+      "nav": 29.05,
+      "fecha_nav": "2026-09-30",
+      "fuente_nav": "https://biva.mx/storage/data-rs-cnbv/ReporteTrimestral_FSHOP_2026_3_121252-261020-af8f82e0_1792519423319.pdf",
       "ocupacion": null,
       "ltv": null,
-      "fuente_trimestral": null
+      "fuente_trimestral": "https://biva.mx/storage/data-rs-cnbv/ReporteTrimestral_FSHOP_2026_3_121252-261020-af8f82e0_1792519423319.pdf",
+      "nav_tipo": "calculado",
+      "nav_nota": "Calculado: patrimonio controlador 18,506,737,000 pesos entre 637,115,444 CBFIs con derechos económicos, según la información financiera trimestral 3T26 ante BIVA."
     },
     {
       "clave": "FIHO12",
@@ -217,7 +233,9 @@
       "fuente_nav": null,
       "ocupacion": null,
       "ltv": null,
-      "fuente_trimestral": null
+      "fuente_trimestral": null,
+      "nav_tipo": null,
+      "nav_nota": "La emisora no publicó un NAV por CBFI en el reporte 3T26 que pudimos verificar, o no localizamos en ese reporte el patrimonio controlador y el número de CBFIs en circulación para calcularlo."
     },
     {
       "clave": "NEXT25",
@@ -235,13 +253,15 @@
       "fecha_pago": "2026-11-09",
       "fuente_dist": "https://www.bmv.com.mx/docs-pub/fibderec/fibderec_1601914_1.pdf",
       "nota": "100% resultado fiscal. Este aviso sustituye al publicado el 30 de octubre de 2026.",
-      "titulos": 405283482,
-      "nav": null,
-      "fecha_nav": null,
-      "fuente_nav": null,
+      "titulos": 405903582,
+      "nav": 121.04,
+      "fecha_nav": "2026-09-30",
+      "fuente_nav": "https://biva.mx/storage/data-rs-cnbv/ReporteTrimestral_NEXT_2026_3_121471-261026-24e1584b_1793049022351.pdf",
       "ocupacion": null,
       "ltv": null,
-      "fuente_trimestral": null
+      "fuente_trimestral": "https://biva.mx/storage/data-rs-cnbv/ReporteTrimestral_NEXT_2026_3_121471-261026-24e1584b_1793049022351.pdf",
+      "nav_tipo": "calculado",
+      "nav_nota": "Calculado: patrimonio controlador 49,131,343,000 pesos entre 405,903,582 CBFIs en circulación al 30 de septiembre de 2026, según la información financiera trimestral 3T26 ante BIVA."
     },
     {
       "clave": "FMX23",
@@ -265,7 +285,9 @@
       "fuente_nav": null,
       "ocupacion": null,
       "ltv": null,
-      "fuente_trimestral": null
+      "fuente_trimestral": null,
+      "nav_tipo": null,
+      "nav_nota": "La emisora no publicó un NAV por CBFI en el reporte 3T26 que pudimos verificar, o no localizamos en ese reporte el patrimonio controlador y el número de CBFIs en circulación para calcularlo."
     },
     {
       "clave": "FINN13",
@@ -284,12 +306,14 @@
       "fuente_dist": "https://www.bmv.com.mx/docs-pub/fibderec/fibderec_1601861_1.pdf",
       "nota": "100% reembolso de capital.",
       "titulos": 725309783,
-      "nav": null,
-      "fecha_nav": null,
-      "fuente_nav": null,
+      "nav": 9.96,
+      "fecha_nav": "2026-09-30",
+      "fuente_nav": "https://fibrainn.mx/assets/docs/fibra-inn-reporte-de-resultados-3t26-vf_6ae12e39d270d.pdf",
       "ocupacion": null,
       "ltv": null,
-      "fuente_trimestral": null
+      "fuente_trimestral": "https://biva.mx/storage/data-rs-cnbv/ReporteTrimestral_FINN_2026_3_121537-261027-2a537d57_1793139471842.pdf",
+      "nav_tipo": "calculado",
+      "nav_nota": "Calculado: patrimonio de la participación controladora 7,226,577,000 pesos entre 725,309,783 CBFIs con derecho a distribución, según el reporte de resultados 3T26 de la emisora y la información financiera trimestral ante BIVA."
     },
     {
       "clave": "STORAGE18",
@@ -313,7 +337,9 @@
       "fuente_nav": null,
       "ocupacion": null,
       "ltv": null,
-      "fuente_trimestral": null
+      "fuente_trimestral": null,
+      "nav_tipo": null,
+      "nav_nota": "La emisora no publicó un NAV por CBFI en el reporte 3T26 que pudimos verificar, o no localizamos en ese reporte el patrimonio controlador y el número de CBFIs en circulación para calcularlo."
     },
     {
       "clave": "TERRA13",
@@ -338,7 +364,9 @@
       "ocupacion": null,
       "ltv": null,
       "fuente_trimestral": null,
-      "fuente_estado": "https://www.bmv.com.mx/docs-pub/eventfid/eventfid_1535230_1721_1.pdf"
+      "fuente_estado": "https://www.bmv.com.mx/docs-pub/eventfid/eventfid_1535230_1721_1.pdf",
+      "nav_tipo": null,
+      "nav_nota": "Deslistada; no hay NAV vigente."
     },
     {
       "clave": "FIBRAMQ12",
@@ -356,14 +384,16 @@
       "fecha_pago": null,
       "fuente_dist": "https://www.bmv.com.mx/docs-pub/eventfid/eventfid_1576632_1622_1.pdf",
       "nota": "Último aviso oficial verificado en esta tabla: distribución 2T26 por 0.6125. En ese aviso se indicó el paso a pagos mensuales de 0.2042; los pagos posteriores están por confirmar con el aviso oficial más reciente.",
-      "titulos": null,
-      "nav": null,
-      "fecha_nav": null,
-      "fuente_nav": null,
+      "titulos": 797311397,
+      "nav": 51.92,
+      "fecha_nav": "2026-09-30",
+      "fuente_nav": "https://biva.mx/storage/data-rs-cnbv/ReporteTrimestral_FIBRAMQ_2026_3_121426-261023-4b14790c_1792785494173.pdf",
       "ocupacion": null,
       "ltv": null,
-      "fuente_trimestral": null,
-      "fuente_estado": "https://www.bmv.com.mx/docs-pub/eventfid/eventfid_1601460_1622_1.pdf"
+      "fuente_trimestral": "https://biva.mx/storage/data-rs-cnbv/ReporteTrimestral_FIBRAMQ_2026_3_121426-261023-4b14790c_1792785494173.pdf",
+      "fuente_estado": "https://www.bmv.com.mx/docs-pub/eventfid/eventfid_1601460_1622_1.pdf",
+      "nav_tipo": "calculado",
+      "nav_nota": "Calculado: patrimonio controlador 41,395,657,000 pesos entre 797,311,397 CBFIs en circulación al 30 de septiembre de 2026, según la información financiera trimestral 3T26 ante BIVA."
     }
   ]
 }

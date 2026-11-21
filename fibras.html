@@ -3,18 +3,6 @@
 <p><a href="https://finanzasytarjetasmx.wordpress.com/">← Volver al blog Finanzas y Tarjetas MX</a></p>
 <h1>FIBRAs mexicanas: precios y distribuciones</h1>
 <p class="warn" id="nota">Cargando datos…</p>
-<aside class="referidos"><p><strong>Este artículo contiene enlaces de referido.</strong> Si abres una cuenta o una tarjeta con estos enlaces, el blog puede recibir una comisión, sin costo extra para ti.</p><ul>
-<li><a href="https://openbank.onelink.me/HARX/hx60yxru" rel="nofollow sponsored">Openbank</a> (código 18537011171617101303)</li>
-<li><a href="https://nubank.com.mx/mgm/?id=fzLUIiZjS-6OYeZHSnF8Mg&amp;msg=06478&amp;utm_channel=referral&amp;utm_medium=other&amp;utm_source=mgm" rel="nofollow sponsored">Nu</a></li>
-<li><a href="https://mpago.li/1ACqcsW" rel="nofollow sponsored">Mercado Pago</a> (código BI9rTVCH)</li>
-<li><a href="https://hybn.co/b/yvJHPPe-" rel="nofollow sponsored">Hey Banco</a></li>
-<li><a href="https://storicard.onelink.me/uu1Y/rmhgljnq" rel="nofollow sponsored">Stori</a></li>
-<li><a href="https://signup.klar.mx?code=ODI0RKRG&amp;utm_source=Referral&amp;utm_medium=Referral&amp;pid=Referral&amp;utm_campaign=Offer_Screen&amp;c=Offer_Screen" rel="nofollow sponsored">Klar</a></li>
-<li><a href="https://bancoplata.mx/amigos/credito/armando.enrique9jxo" rel="nofollow sponsored">Plata Card</a></li>
-<li><a href="https://revolut.com/referral/?referral-code=armandoenriquef!OCT1-26-AR-MX-H2&amp;geo-redirect" rel="nofollow sponsored">Revolut</a></li>
-<li><a href="https://americanexpress.com/es-mx/referral/platinum-credit?ref=aRMaNFUMzM&amp;XL=MIANS" rel="nofollow sponsored">American Express</a></li>
-<li><a href="https://d.didiglobal.com/GRFVCCa?r=MGM_homepage_icon&amp;c=M2" rel="nofollow sponsored">DiDi Card</a></li>
-</ul></aside>
 <label>CBFIs que tienes: <input id="n" type="number" value="100" min="0"></label>
 <p><label>Gráfica de precios (5 años, cierres semanales): <select id="g"></select></label></p>
 <canvas id="c" height="120"></canvas>
@@ -37,8 +25,21 @@
 <ul>
 <li>Precios, variación, rango de 52 semanas, capitalización y rendimiento bruto a 12 meses: Yahoo Finance (no son datos oficiales de la bolsa y pueden ir con retraso o, en algunos casos, sin operaciones recientes).</li>
 <li>Última distribución, fechas ex-derecho y de pago: avisos oficiales de la BMV y de BIVA, con liga al documento en cada fila.</li>
-<li>NAV, ocupación y deuda: solo si se verificaron en el reporte trimestral oficial de la FIBRA; si no, se muestra «por confirmar».</li>
+    <li>NAV: si la emisora lo publica en su reporte trimestral oficial, se muestra esa cifra; si no la imprime, se calcula como patrimonio o capital contable controlador entre CBFIs en circulación (o con derecho a distribución, cuando el reporte lo desglosa así) y se marca como «calculado», con fecha y liga a la fuente. Si no hay esas cifras oficiales, se muestra «no publicado». En Fibra Prologis el reporte está en dólares; el equivalente en pesos usa el tipo de cambio de $18.50 por dólar que la emisora emplea en su paquete financiero 3T26.</li>
 <li>La API de Banxico no publica precios ni dividendos de FIBRAs; sirve para comparar, por ejemplo, contra CETES o la inflación.</li>
+</ul>
+<p>Reportes oficiales usados para el NAV (corte 30 de septiembre de 2026):</p>
+<ul>
+<li>Fibra Uno: <a href="https://funo.mx/site_media/uploads/documentos/documento-uKwld-1794333463.pdf">suplemento informativo 3T26</a> (NAV publicado).</li>
+<li>Fibra Monterrey: <a href="https://biva.mx/storage/data-rs-cnbv/ReporteTrimestral_FMTY_2026_3_121817-261030-d9d85f65_1793394273429.pdf">información financiera trimestral 3T26 en BIVA</a> (valor en libros publicado).</li>
+<li>Fibra Danhos: <a href="https://fibradanhos.com.mx/reportes-trimestrales/pdf/2026/3t26/3T%202026%20Espa%C3%B1ol.pdf">reporte 3T26 de la emisora</a> (calculado).</li>
+<li>Fibra Nova: <a href="https://cdn.investorcloud.net/FNOVA/InformacionFinanciera/ReportesTrimestrales/2026-3T26.pdf">reporte de resultados 3T26</a> y <a href="https://biva.mx/storage/information-send/IFFIBRAS/FACTIN/ReporteTrimestral_3T_2026-09-30_FNOVA_1793061838651.pdf">información trimestral en BIVA</a> (calculado).</li>
+<li>Fibra Prologis: <a href="https://d1io3yog0oux5.cloudfront.net/_852f1580ba78035545065e858fbb07c8/fibraprologis/db/735/8245/file/Financial+Report.pdf">reporte financiero 3T26</a> y <a href="https://biva.mx/storage/data-rs-cnbv/ReporteTrimestral_FIBRAPL_2026_3_121337-261021-ef28f8d1_1792620203217.pdf">información trimestral en BIVA</a> (calculado).</li>
+<li>Fibra Shop: <a href="https://biva.mx/storage/data-rs-cnbv/ReporteTrimestral_FSHOP_2026_3_121252-261020-af8f82e0_1792519423319.pdf">información financiera trimestral 3T26 en BIVA</a> (calculado).</li>
+<li>Fibra Inn: <a href="https://fibrainn.mx/assets/docs/fibra-inn-reporte-de-resultados-3t26-vf_6ae12e39d270d.pdf">reporte de resultados 3T26</a> y <a href="https://biva.mx/storage/data-rs-cnbv/ReporteTrimestral_FINN_2026_3_121537-261027-2a537d57_1793139471842.pdf">información trimestral en BIVA</a> (calculado).</li>
+<li>Fibra Next: <a href="https://biva.mx/storage/data-rs-cnbv/ReporteTrimestral_NEXT_2026_3_121471-261026-24e1584b_1793049022351.pdf">información financiera trimestral 3T26 en BIVA</a> (calculado).</li>
+<li>Fibra Macquarie: <a href="https://biva.mx/storage/data-rs-cnbv/ReporteTrimestral_FIBRAMQ_2026_3_121426-261023-4b14790c_1792785494173.pdf">información financiera trimestral 3T26 en BIVA</a> (calculado).</li>
+<li>Fibra Hipotecaria: <a href="https://biva.mx/storage/information-send/IFTRIM/BINVEX/ReporteTrimestral_3T_2026_FHIPO_2061_1793313400683.pdf">información financiera trimestral 3T26</a> (calculado).</li>
 </ul>
 <p><small>No es recomendación de inversión. Las FIBRAs cotizan en bolsa: el precio puede bajar, la distribución puede recortarse y las condiciones fiscales dependen de cada persona. Confirma siempre en el aviso oficial y en tu casa de bolsa.</small></p>
 <aside class="referidos"><p><strong>Este artículo contiene enlaces de referido.</strong> Si abres una cuenta o una tarjeta con estos enlaces, el blog puede recibir una comisión, sin costo extra para ti.</p><ul>
@@ -98,7 +99,7 @@ function render(){
     const precio=des?'—':(r.precio==null?'por confirmar':mxn(r.precio)+(r.fecha?' <small>'+fe(r.fecha)+'</small>':'')+(r.aviso||r.obsoleto?' *':''));
     const r52=(r.min_52s!=null&&r.max_52s!=null)?(mxn(r.min_52s)+' – '+mxn(r.max_52s)):'—';
     const st=r.estado==='deslistada'?' <small>(deslistada)</small>':'';
-    const nav=r.nav==null?'por confirmar':mxn(r.nav)+(r.fecha_nav?' <small>'+fe(r.fecha_nav)+'</small>':'');
+    const nav=r.nav==null?(r.estado==='deslistada'?'no aplica':'no publicado'):(mxn(r.nav)+(r.fecha_nav?' <small>'+fe(r.fecha_nav)+'</small>':'')+(r.nav_tipo==='calculado'?' <small>(calculado)</small>':''));
     return '<tr>'+
       '<td><strong>'+r.clave+'</strong><br><small>'+(r.nombre||'')+'</small>'+st+'</td>'+
       '<td>'+precio+'</td>'+

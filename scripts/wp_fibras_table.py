@@ -76,9 +76,11 @@ def main():
         if isinstance(precio, (int, float)) and isinstance(nav, (int, float)) and nav:
             prima = (precio / nav - 1) * 100
         if nav is None:
-            nav_cell = "por confirmar"
+            nav_cell = "no aplica" if f.get("estado") == "deslistada" else "no publicado"
         else:
             nav_cell = mxn(nav, 2) + (f" ({fecha(f.get('fecha_nav'))})" if f.get("fecha_nav") else "")
+            if f.get("nav_tipo") == "calculado":
+                nav_cell += ", calculado"
             if prima is not None:
                 nav_cell += f"; prima/desc. {pct(prima)}"
         precio_cell = "—" if f.get("estado") == "deslistada" else (mxn(precio) if precio is not None else "por confirmar")
