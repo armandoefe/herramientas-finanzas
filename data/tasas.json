@@ -1,6 +1,6 @@
 {
- "actualizado": "2026-11-16",
- "nota": "Tasas anuales brutas, antes de impuestos, tomadas de los sitios oficiales al 16-nov-2026. Cambian sin aviso; confirma en la app o el sitio oficial antes de invertir.",
+ "actualizado": "2026-11-23",
+ "nota": "Tasas anuales brutas, antes de impuestos, tomadas de los sitios oficiales al 23-nov-2026. Cambian sin aviso; confirma en la app o el sitio oficial antes de invertir.",
  "cuentas": [
   {
    "inst": "Openbank",
@@ -16,7 +16,7 @@
    "inst": "Nu",
    "tipo": "Banco",
    "tasa": 13.0,
-   "cond": "Cajita Turbo: 13% anual fijo hasta $25,000 (GAT nom. 13.88%, real 9.53%). Requiere al menos una compra con tarjeta Nu de débito o crédito cada 30 días; solo una Cajita Turbo. Cajita 24/7: 6.50% promocional (tasa de contrato 6%; GAT nom. 6.72%, real 2.64%). Ahorro congelado: 6.55% (7 días) a 6.80% (180 días). Cálculo 25-sep-2026; vigencia al 18-nov-2026",
+   "cond": "Cajita Turbo: 13% anual fijo (GAT nom. 13.88%, real 9.56%). Requiere al menos una compra con tarjeta Nu de débito o crédito cada 30 días; solo una Cajita Turbo. Cajita 24/7: 6.50% promocional (tasa de contrato 6%; GAT nom. 6.72%, real 2.67%). Ahorro congelado: 6.55% (7 días), 6.60% (28), 6.70% (90) y 6.80% (180 días). Cálculo 18-nov-2026; vigencia al 30-nov-2026",
    "prot": "IPAB 400,000 UDIs",
    "fuente": "https://nu.com.mx/cuenta/rendimientos/",
    "verificado": true,
@@ -26,7 +26,7 @@
    "inst": "Stori",
    "tipo": "SOFIPO",
    "tasa": 15.0,
-   "cond": "Hasta 15.00% GAT nominal (tasa 14.14%, GAT real 10.49%) en Stori Inversión+ a 60 días con Stori Pro (clientes invitados; tope $10,000; no aplica en reinversiones; gasto desde $2,000 al mes). Vigencia de esa promoción: 20-oct-2026 al 16-nov-2026 (vence el 16-nov). Apartados: 7.25% GAT nominal, liquidez 24/7. Otros plazos Inversión+ (costos oficiales, misma vigencia): 30 días 7.05% GAT; 90 días 11.00% GAT; 180 días 10.00% GAT; 360 días 8.25% GAT",
+   "cond": "Hasta 15.01% GAT nominal en Stori Inversión+ a 60 días con Stori Pro (tope $10,000; aplican restricciones y términos del programa; el sitio dice 'por tiempo limitado' y no muestra fecha de vigencia, la anterior era al 16-nov-2026). Apartados: 7.25% GAT nominal, liquidez 24/7. Otros plazos Inversión+ (sitio oficial al 23-nov-2026): 30 días 7.05% GAT; 90 días 11.00% GAT; 180 días 12.00% GAT; 360 días 8.25% GAT",
    "prot": "PROSOFIPO 25,000 UDIs",
    "fuente": "https://www.storicard.com/stori-cuentamas",
    "verificado": true,
@@ -125,8 +125,8 @@
   {
    "inst": "CETES 28 días (Cetesdirecto)",
    "tipo": "Gobierno",
-   "tasa": 6.2,
-   "cond": "CETES a 28 días (1 mes): 6.20% anual. Tabla oficial de Cetesdirecto «CETES 17 noviembre 2026». La última subasta de Banxico del 12-nov-2026 también fue 6.20%. Otros plazos en la misma tabla: 3 meses 6.47%, 6 meses 6.61%, 1 año 6.95%, 2 años 7.85%. También se actualiza sola la gráfica Inflación vs CETES",
+   "tasa": 6.19,
+   "cond": "CETES a 28 días (1 mes): 6.19% anual. Tabla oficial de Cetesdirecto «CETES 23 noviembre 2026». Subasta de Banxico del 17-nov-2026: 6.19%. Otros plazos en la misma tabla: 3 meses 6.49%, 6 meses 6.67%, 1 año 6.95%, 2 años 7.87%. También se actualiza sola la gráfica Inflación vs CETES",
    "prot": "Gobierno Federal",
    "fuente": "https://www.cetesdirecto.com/tablas/valores_gubernamentales/cetes.html",
    "verificado": true,
