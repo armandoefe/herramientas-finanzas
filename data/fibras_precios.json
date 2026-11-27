@@ -1,18 +1,18 @@
 {
- "actualizado": "2026-11-25",
- "actualizado_hora": "2026-11-25T21:42:07-0600",
+ "actualizado": "2026-11-26",
+ "actualizado_hora": "2026-11-26T21:43:07-0600",
  "fuente": "Yahoo Finance (yfinance). Precios no oficiales y pueden ir con retraso.",
  "precios": {
   "FMTY14": {
    "ticker": "FMTY14.MX",
-   "precio": 16.89,
-   "fecha": "2026-11-25",
-   "cambio_pct": -0.06,
+   "precio": 16.83,
+   "fecha": "2026-11-26",
+   "cambio_pct": -0.24,
    "min_52s": 13.35,
    "max_52s": 17.15,
-   "volumen": 8972876,
-   "yield_12m": 5.73,
-   "capitalizacion": 81153550054.56,
+   "volumen": 865768,
+   "yield_12m": 5.75,
+   "capitalizacion": 80865260356.32,
    "historico": [
     [
      "2021-11-28",
@@ -1060,7 +1060,7 @@
     ],
     [
      "2026-11-29",
-     16.89
+     16.83
     ]
    ],
    "error": null,
@@ -1068,14 +1068,14 @@
   },
   "DANHOS13": {
    "ticker": "DANHOS13.MX",
-   "precio": 29.26,
-   "fecha": "2026-11-25",
-   "cambio_pct": 1.04,
+   "precio": 29.45,
+   "fecha": "2026-11-26",
+   "cambio_pct": 0.24,
    "min_52s": 24.83,
    "max_52s": 32.14,
-   "volumen": 258183,
-   "yield_12m": 6.15,
-   "capitalizacion": 47506741522.24,
+   "volumen": 85095,
+   "yield_12m": 6.11,
+   "capitalizacion": 47815226856.8,
    "historico": [
     [
      "2021-11-28",
@@ -2123,7 +2123,7 @@
     ],
     [
      "2026-11-29",
-     29.26
+     29.45
     ]
    ],
    "error": null,
@@ -2131,14 +2131,14 @@
   },
   "FUNO11": {
    "ticker": "FUNO11.MX",
-   "precio": 36.27,
-   "fecha": "2026-11-25",
-   "cambio_pct": 0.44,
+   "precio": 36.44,
+   "fecha": "2026-11-26",
+   "cambio_pct": 0.55,
    "min_52s": 26.0,
    "max_52s": 37.66,
-   "volumen": 6273192,
-   "yield_12m": 7.2,
-   "capitalizacion": 139234138645.68,
+   "volumen": 1144742,
+   "yield_12m": 7.16,
+   "capitalizacion": 139886738688.96,
    "historico": [
     [
      "2021-11-28",
@@ -3186,7 +3186,7 @@
     ],
     [
      "2026-11-29",
-     36.27
+     36.44
     ]
    ],
    "error": null,
@@ -3194,14 +3194,14 @@
   },
   "FNOVA17": {
    "ticker": "FNOVA17.MX",
-   "precio": 43.3,
-   "fecha": "2026-11-25",
-   "cambio_pct": 53.82,
+   "precio": 43.07,
+   "fecha": "2026-11-26",
+   "cambio_pct": 53.0,
    "min_52s": 28.15,
-   "max_52s": 43.66,
-   "volumen": 9300,
-   "yield_12m": 5.75,
-   "capitalizacion": 25717204852.4,
+   "max_52s": 43.5,
+   "volumen": 5058,
+   "yield_12m": 5.78,
+   "capitalizacion": 25580600761.96,
    "historico": [
     [
      "2021-11-28",
@@ -4249,7 +4249,7 @@
     ],
     [
      "2026-11-29",
-     43.3
+     43.07
     ]
    ],
    "error": null,
@@ -4257,14 +4257,14 @@
   },
   "FIBRAPL14": {
    "ticker": "FIBRAPL14.MX",
-   "precio": 86.27,
-   "fecha": "2026-11-25",
-   "cambio_pct": 1.71,
+   "precio": 85.72,
+   "fecha": "2026-11-26",
+   "cambio_pct": -0.34,
    "min_52s": 71.46,
    "max_52s": 89.13,
-   "volumen": 847238,
-   "yield_12m": 4.18,
-   "capitalizacion": 143915985823.7,
+   "volumen": 167712,
+   "yield_12m": 4.2,
+   "capitalizacion": 142998473453.2,
    "historico": [
     [
      "2021-11-28",
@@ -5312,7 +5312,7 @@
     ],
     [
      "2026-11-29",
-     86.27
+     85.72
     ]
    ],
    "error": null,
@@ -5320,14 +5320,14 @@
   },
   "FCFE18": {
    "ticker": "FCFE18.MX",
-   "precio": 24.34,
-   "fecha": "2026-11-25",
-   "cambio_pct": 0.16,
+   "precio": 24.5,
+   "fecha": "2026-11-26",
+   "cambio_pct": 0.66,
    "min_52s": 21.66,
    "max_52s": 25.5,
-   "volumen": 995939,
-   "yield_12m": 12.75,
-   "capitalizacion": 20766776303.74,
+   "volumen": 830100,
+   "yield_12m": 12.67,
+   "capitalizacion": 20903287569.5,
    "historico": [
     [
      "2021-11-28",
@@ -6375,7 +6375,7 @@
     ],
     [
      "2026-11-29",
-     24.34
+     24.5
     ]
    ],
    "error": null,
@@ -6383,14 +6383,14 @@
   },
   "FHIPO14": {
    "ticker": "FHIPO14.MX",
-   "precio": 13.93,
-   "fecha": "2026-11-25",
-   "cambio_pct": -0.14,
+   "precio": 13.9,
+   "fecha": "2026-11-26",
+   "cambio_pct": -0.22,
    "min_52s": 13.48,
    "max_52s": 15.24,
-   "volumen": 2064,
-   "yield_12m": 10.23,
-   "capitalizacion": 5200769107.87,
+   "volumen": 5428,
+   "yield_12m": 10.25,
+   "capitalizacion": 5189568600.1,
    "historico": [
     [
      "2021-11-28",
@@ -7438,7 +7438,7 @@
     ],
     [
      "2026-11-29",
-     13.93
+     13.9
     ]
    ],
    "error": null,
@@ -7446,14 +7446,14 @@
   },
   "FSHOP13": {
    "ticker": "FSHOP13.MX",
-   "precio": 12.11,
-   "fecha": "2026-11-25",
-   "cambio_pct": -2.26,
+   "precio": 12.18,
+   "fecha": "2026-11-26",
+   "cambio_pct": 0.66,
    "min_52s": 8.51,
    "max_52s": 13.1,
-   "volumen": 83813,
-   "yield_12m": 6.55,
-   "capitalizacion": 7715468026.84,
+   "volumen": 62108,
+   "yield_12m": 6.51,
+   "capitalizacion": 7760066107.92,
    "historico": [
     [
      "2021-11-28",
@@ -8501,7 +8501,7 @@
     ],
     [
      "2026-11-29",
-     12.11
+     12.18
     ]
    ],
    "error": null,
@@ -8509,14 +8509,14 @@
   },
   "FIHO12": {
    "ticker": "FIHO12.MX",
-   "precio": 7.39,
-   "fecha": "2026-11-25",
-   "cambio_pct": -1.6,
+   "precio": 7.45,
+   "fecha": "2026-11-26",
+   "cambio_pct": 0.81,
    "min_52s": 6.9,
    "max_52s": 8.38,
-   "volumen": 97320,
-   "yield_12m": 8.34,
-   "capitalizacion": 5835923955.38,
+   "volumen": 50536,
+   "yield_12m": 8.28,
+   "capitalizacion": 5883306287.9,
    "historico": [
     [
      "2021-11-28",
@@ -9564,7 +9564,7 @@
     ],
     [
      "2026-11-29",
-     7.39
+     7.45
     ]
    ],
    "error": null,
@@ -9572,14 +9572,14 @@
   },
   "NEXT25": {
    "ticker": "NEXT25.MX",
-   "precio": 98.31,
-   "fecha": "2026-11-25",
-   "cambio_pct": 0.41,
+   "precio": 98.76,
+   "fecha": "2026-11-26",
+   "cambio_pct": 0.46,
    "min_52s": 89.55,
-   "max_52s": 101.99,
-   "volumen": 47369,
-   "yield_12m": 6.03,
-   "capitalizacion": 39904381146.42,
+   "max_52s": 100.49,
+   "volumen": 41758,
+   "yield_12m": 6.0,
+   "capitalizacion": 40087037758.32,
    "historico": [
     [
      "2025-08-03",
@@ -9859,7 +9859,7 @@
     ],
     [
      "2026-11-29",
-     98.31
+     98.76
     ]
    ],
    "error": null,
@@ -9867,13 +9867,13 @@
   },
   "FMX23": {
    "ticker": "FMX23.MX",
-   "precio": 34.4,
-   "fecha": "2026-11-25",
-   "cambio_pct": -0.72,
+   "precio": 33.95,
+   "fecha": "2026-11-26",
+   "cambio_pct": -1.31,
    "min_52s": 27.14,
    "max_52s": 45.9,
-   "volumen": 41689,
-   "yield_12m": 3.52,
+   "volumen": 99226,
+   "yield_12m": 3.56,
    "capitalizacion": null,
    "historico": [
     [
@@ -10482,7 +10482,7 @@
     ],
     [
      "2026-11-29",
-     34.4
+     33.95
     ]
    ],
    "error": null,
@@ -10490,14 +10490,14 @@
   },
   "FINN13": {
    "ticker": "FINN13.MX",
-   "precio": 4.75,
-   "fecha": "2026-11-25",
-   "cambio_pct": 3.26,
+   "precio": 4.76,
+   "fecha": "2026-11-26",
+   "cambio_pct": 0.21,
    "min_52s": 4.35,
    "max_52s": 5.78,
-   "volumen": 816722,
-   "yield_12m": 9.27,
-   "capitalizacion": 3445221469.25,
+   "volumen": 12296,
+   "yield_12m": 7.35,
+   "capitalizacion": 3452474567.08,
    "historico": [
     [
      "2021-11-28",
@@ -11545,7 +11545,7 @@
     ],
     [
      "2026-11-29",
-     4.75
+     4.76
     ]
    ],
    "error": null,
@@ -11553,14 +11553,14 @@
   },
   "STORAGE18": {
    "ticker": "STORAGE18.MX",
-   "precio": 24.39,
-   "fecha": "2026-11-25",
-   "cambio_pct": -0.04,
+   "precio": 24.1,
+   "fecha": "2026-11-26",
+   "cambio_pct": -1.19,
    "min_52s": 23.79,
    "max_52s": 27.0,
-   "volumen": 24416,
-   "yield_12m": 3.71,
-   "capitalizacion": 6345773175.78,
+   "volumen": 428,
+   "yield_12m": 3.76,
+   "capitalizacion": 6270321178.2,
    "historico": [
     [
      "2021-12-05",
@@ -12460,7 +12460,7 @@
     ],
     [
      "2026-11-29",
-     24.39
+     24.1
     ]
    ],
    "error": null,
@@ -12473,14 +12473,14 @@
   },
   "FIBRAMQ12": {
    "ticker": "FIBRAMQ12.MX",
-   "precio": 44.05,
-   "fecha": "2026-11-25",
-   "cambio_pct": -0.27,
-   "min_52s": 30.29,
+   "precio": 44.0,
+   "fecha": "2026-11-26",
+   "cambio_pct": -0.11,
+   "min_52s": 30.48,
    "max_52s": 47.0,
-   "volumen": 7843,
+   "volumen": 15951,
    "yield_12m": 7.42,
-   "capitalizacion": 35121567037.85,
+   "capitalizacion": 35081701468.0,
    "historico": [
     [
      "2021-11-28",
@@ -13528,7 +13528,7 @@
     ],
     [
      "2026-11-29",
-     44.05
+     44.0
     ]
    ],
    "error": null,
